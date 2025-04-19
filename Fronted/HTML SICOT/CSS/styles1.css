@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #e2eaff;
+    color: #101632dd;
+}
+
+body, div, ul, header, footer, a, li, label {
+    margin: 0;
+    padding: 0;
+}
+
+/* -- HEADER SECTION*/
+
+.header {
+    background-color: #1e2a71;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: header;
+}
+.header__nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    font-size: 17px;
+    background-color: #f3f3f382;
+    width: 100vw;
+    height: 40vw;
+    top: 100px;
+
+}
+
+.header__open-nav-button {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 600;
+    position: absolute;
+    right: 15px;
+}
+
+.header__checkbox {
+    display: none;
+}
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 40vw;
+    justify-content: space-evenly;
+    z-index: -1;
+    
+    
+}
+/* Mostrar el menú cuando el checkbox está activado */
+.header__checkbox:checked ~ .header__nav {
+    display: flex;
+    
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 100px;
+    margin: 10px 20px;
+}
+
+.header__nav-item {
+    list-style: none;
+
+}
+.header__nav-item a {
+    color: #f9a125;
+    text-decoration: none;
+}
+
+.header__nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER QUERIES*/
+
+@container header (min-width:600px) {
+    .header__nav {
+        display: block;
+        position: static;
+        height: auto;
+        width: auto;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+    .header__nav-list {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 30px;
+        margin-right: 40px;
+    }
+    .header__open-nav-button {
+        display: none;
+        
+    }
+    
+    
+
+
+}
+
+
