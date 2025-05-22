@@ -9,3 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+document.getElementById("fabButton").addEventListener("click", function () {
+    document.getElementById("fabOptions").classList.toggle("show"); });
+
+    

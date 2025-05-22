@@ -7,6 +7,8 @@
     <title>SICOT</title>
     <link rel="icon" href="img/logo_pestaña_escudo.png">
     <link rel="stylesheet" href="CSS/styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -20,10 +22,10 @@
                         <a href="#inicio" class="navbar__link">Inicio</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#about" class="navbar__link">Acerca de Nosotros</a>
+                        <a href="#service" class="navbar__link">Servicios</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#service" class="navbar__link">Servicios</a>
+                        <a href="#about" class="navbar__link">Acerca de Nosotros</a>
                     </li>
                     <li class="navbar__item">
                         <a href="#contact" class="navbar__link">Contacto</a>
@@ -42,60 +44,110 @@
     <main>
         <!-- Sección de bienvenida -->
         <section id="inicio" class="hero">
-            <div class="container">
-                <h1>¡Transforma el Bienestar Laboral con la Digitalización en SST!</h1>
-                <p>La seguridad y salud en el trabajo (SST) no solo trata de evitar accidentes, sino también de garantizar el bienestar físico y mental de los trabajadores.
-                El estrés laboral, la sobrecarga de tareas y las malas condiciones ergonómicas pueden afectar gravemente la productividad y calidad de vida.
-                La solución está en la tecnolocgía: herramientas digitales como SICOT pueden mejorar la gestión de SST, optimizar procesos y reducir riesgos.</p>
-                <button onclick="window.location.href='#service'">Saber más</button>
-                <button onclick="window.location.href='#contact'">Solicitar una Demo</button>
+            <div class="container__hero">
+
+                <div class="hero-text">
+                    <h1> SICOT </h1>
+                    <h2>Sistema de Inspección y Control Operativo para el Trabajador</h2> 
+                    <p>
+                        SICOT es una solución tecnológica diseñada para optimizar la gestión de la Seguridad y Salud en el Trabajo (SST) mediante herramientas de inspección, monitoreo y control en tiempo real. Su objetivo principal es proteger al trabajador y garantizar el cumplimiento normativo en ambientes laborales diversos.                        
+                    </p>
+                    <div class="button-center">
+
+                        <a href="https://wa.me/573001234567?text=Hola,%20quisiera%20solicitar%20una%20demo%20de%20SICOT" target="_blank" style="text-decoration: none;">
+                            <button class="whatsapp-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+                            Solicitar una Demo
+                            </button>
+                        </a>
+                    </div>
+                    
+                </div>           
+                                
+                <div class="hero-image">
+                    <img src="./img/software control.jpg" alt="SICOT plataforma de seguridad laboral" class="img-fluid">
+                </div>
+
                 
-                <img src="./img/mujer.jpg" alt="SICOT" class="img-fluid">
+            
             </div>
         </section>
         
         <!-- Sección "Acerca de Nosotros" -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2>Acerca de Nosotros</h2>
-                <p>SICOT es una plataforma diseñada para simplificar la gestión de seguridad y salud en el trabajo.
-                    Nuestro objetivo es ofrecer una solución completa para el seguimiento, reporte y análisis de
-                    incidentes, además de facilitar auditorías de seguridad en tiempo real.</p>
-                <p>Nos comprometemos con la seguridad laboral y la mejora continua en el cumplimiento de normativas de
-                    seguridad. SICOT permite a las organizaciones cumplir con los estándares de seguridad y mantener un
-                    entorno laboral seguro y saludable.</p>
-                <img src="./img/resgistro.png" alt="Equipo SICOT" class="img-fluid">
+        <section id="about">
+
+            <div class="container__about">
+
+                <div class="about__img">
+                    <img src="./img/about (2).jpg" alt="Equipo SICOT" class="img-about">
+                </div>
+
+                <div class="about__text">
+                    <h2>Acerca de Nosotros</h2>
+                    <p>
+                        En SICOT desarrollamos soluciones digitales enfocadas en la prevención de riesgos laborales y el cumplimiento normativo en seguridad y salud en el trabajo. Nuestra plataforma nace desde la realidad del entorno laboral, ofreciendo una herramienta intuitiva, escalable y centrada en proteger a los trabajadores.
+                        Combinamos tecnología y experiencia en SST para facilitar auditorías, reportes en tiempo real e inspecciones personalizadas, todo desde un acceso web o móvil. Creemos que la seguridad no debe ser solo un requisito legal, sino una prioridad humana. Por eso, trabajamos cada día para transformar la gestión preventiva en empresas de todos los sectores.
+                    </p>
+                </div>
+
+                <div class="about__text">
+                    <h2 class="about__text--h2 ">Aliados Estratégicos en la Gestión de Riesgos Laborales</h2>
+                    <p class="about__text--p">
+                        Nos comprometemos con la seguridad laboral y la mejora continua en el cumplimiento de normativas de
+                        seguridad. SICOT permite a las organizaciones cumplir con los estándares de seguridad y mantener un
+                        Tecnología al servicio de la vida laboral.
+                        En un mundo donde la seguridad laboral es primordial, SICOT se presenta como una herramienta con
+                        múltiples funcionalidades que permiten a las empresas gestionar de manera eficiente.
+                        
+                    </p>
+                </div>
+
+                <div class="about__img">
+                    <img src="./img/about (1).jpg" alt="Equipo SICOT" class="img-about">
+                </div>
+
+                
+    
+                
+
             </div>
         </section>
+        
 
         <!-- Sección de Servicios -->
-        <section id="service" class="section">
-            <div class="container">
-                <h2>Nuestros Servicios</h2>
+        <section id="service" > 
+            <h2 class="serviceh2">Nuestros Servicios</h2>
+
+            <div class="container__service">
 
                 <div class="service-item">
-                    <h3>Gestión de Incidentes</h3>
-                    <p>Reporte y seguimiento en tiempo real de los incidentes ocurridos en el lugar de trabajo. Accede a
-                        registros detallados y mantente al día con las actualizaciones de los casos reportados.</p>
+                    <h3>Gestión de Inspecciones y Auditorías en Tiempo Real</h3>
+                    <p>Permite a los responsables de SST realizar inspecciones desde dispositivos móviles o computadores, personalizando listas de chequeo según normativas y áreas específicas.</p>
                 </div>
 
                 <div class="service-item">
-                    <h3>Auditorías de Seguridad</h3>
-                    <p>Facilitamos auditorías de seguridad con checklists personalizadas y geolocalización para asegurar
-                        el cumplimiento en todas las áreas. Registra y evalúa la seguridad de las instalaciones de forma
-                        organizada y detallada.</p>
+                    <h3>Reporte Inmediato de Incidentes y Condiciones Inseguras</h3>
+                    <p>Facilita el registro y la atención de eventos con evidencia fotográfica, ubicación y detalles clave para tomar decisiones ágiles.</p>
                 </div>
 
                     <div class="service-item">
-                    <h3>Generación de Reportes</h3>
-                    <p>Obtén reportes detallados que te permitirán analizar tendencias, identificar áreas de mejora y
-                        tomar decisiones informadas sobre la seguridad laboral.</p>
+                    <h3> Automatización de Reportes y Seguimiento de Indicadores</h3>
+                    <p>Genera informes automáticos que ayudan a monitorear tendencias, identificar riesgos recurrentes y cumplir con los requisitos legales y de auditorías externas.</p>
                 </div>
 
                 <div class="service-item">
-                    <h3>Notificaciones en Tiempo Real</h3>
-                    <p>Recibe alertas y notificaciones automáticas sobre cualquier incidente o auditoría pendiente.
-                        Mantente informado en tiempo real y toma acciones inmediatas cuando sea necesario.</p>
+                    <h3>Acceso Multiplataforma (Web y Móvil)</h3>
+                    <p>SICOT está disponible desde cualquier dispositivo, permitiendo a las organizaciones estar siempre conectadas con la realidad del entorno laboral.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Cumplimiento Normativo Garantizado</h3>
+                    <p>Nuestra plataforma está alineada con la normativa nacional en seguridad y salud en el trabajo, ayudando a las empresas a mantener la documentación y procesos al día.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Capacitación Continua y Gestión del Conocimiento</h3>
+                    <p>SICOT incorpora módulos de aprendizaje que permiten al equipo de trabajo acceder a capacitaciones y guías prácticas desde la plataforma, fortaleciendo la cultura de seguridad organizacional.</p>
                 </div>
             </div>
         </section>
@@ -122,38 +174,84 @@
             <div class="container">
                 <h2>Testimonios</h2>
                 <div class="testimonial">
+                    <img src="https://i.pravatar.cc/80?img=36" alt="Luisa Moreno">
                     <p>"Gracias a SICOT, hemos reducido el tiempo de respuesta ante incidentes y mejorado la seguridad
                         en nuestras instalaciones. Es una herramienta indispensable para nuestra empresa."</p>
-                    <p>- Juan Pérez, Gerente de Seguridad en XYZ Company</p>
+                    <p>- Luisa Moreno, Gerente de Seguridad en XYZ Company</p>
                 </div>
                 <div class="testimonial">
+                    <img src="https://i.pravatar.cc/80?img=45" alt="María González">
                     <p>"La funcionalidad de auditorías personalizables es exactamente lo que necesitábamos para cumplir
                         con los estándares de seguridad."</p>
                     <p>- María González, Supervisora de SST en ABC Corp</p>
-                </div>
+                    </div>
+                <div class="testimonial">
+                    <img src="https://i.pravatar.cc/80?img=67" alt="Carlos Pérez">
+                    <p>"SICOT ha transformado nuestra forma de gestionar la seguridad laboral. La geolocalización y los
+                        reportes en tiempo real son un gran avance."</p>
+                    <p>- Carlos Pérez, Coordinador de Seguridad en DEF Ltda.</p>
+
+
+</div>
+
             </div>
         </section>
 
         <!-- Sección de Contacto -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contacto</h2>
-                <p>¿Tienes alguna pregunta o deseas saber más sobre SICOT? Contáctanos y responderemos a la brevedad.
-                </p>
-                <form action="submit_form.php" method="POST">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" name="name" placeholder="Jhon Javier perez Ruiz" id="nombre" required>
-                    <label for="correo">Correo electronico</label>
-                    <input type="email" name="email" placeholder="ejemplo@gmail.com" id= "correo" required>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea rows="10" maxlength="150" name="message" placeholder="Deja tu mensaje..."id="mensaje" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
-    </main>
+            <form class="formc">
+            <h2 id="headingc">Contáctanos</h2>
 
-    <!-- Footer -->
+            <div class="fieldc">
+                <svg class="input-iconc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zM12 13.2c-3.2 0-9.6 1.6-9.6 4.8V21h19.2v-3c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                <input type="text" placeholder="Nombre completo" class="input-fieldc" required>
+            </div>
+        
+            <div class="fieldc">
+                <svg class="input-iconc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v1.5l10 6 10-6V6c0-1.1-.9-2-2-2zm0 4.5l-10 6-10-6V18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8.5z"/></svg>
+                <input type="email" placeholder="Correo electrónico" class="input-fieldc" required>
+            </div>
+        
+            <div class="fieldc">
+                <svg class="input-iconc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.46l-5.27-.61a.998.998 0 0 0-1.11.65l-1.11 3.33c-2.83-1.27-5.15-3.6-6.42-6.42l3.33-1.11a.998.998 0 0 0 .65-1.11L8.54 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-4.54z"/></svg>
+                <input type="tel" placeholder="Teléfono o WhatsApp" class="input-fieldc">
+            </div>
+        
+            <div class="fieldc">
+                <textarea class="input-fieldc" placeholder="Escribe tu mensaje aquí" rows="4"></textarea>
+            </div>
+
+    <div class="btnc">
+    <button type="submit" class="button2c">Enviar</button>
+    
+    </div>
+</form>
+
+        
+    <!-- Botón flotante tipo speed dial -->
+    <div class="fab-container">
+        <div class="fab-button" id="fabButton"><i class="fas fa-plus"></i></div>
+        <ul class="fab-options" id="fabOptions">
+            <li>
+            <a href="https://wa.me/57323251633" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            </a>
+            </li>
+            <li>
+            <a href="mailto:yeniree_010@hotmail.com?subject=Contacto%20desde%20la%20web&body=Hola,%20quiero%20más%20información." title="Correo electrónico">
+            <i class="fas fa-envelope"></i>
+            </a>
+            </li>
+            <li>
+            <a href="tel:3232516322" title="Llamar">
+                <i class="fas fa-phone"></i>
+            </a>
+        </li>
+        </ul>
+        </div>
+
+
+
+        <!-- Footer --> 
     <footer>
         <div class="container">
             <p>&copy; 2024 SICOT - Todos los derechos reservados</p>
