@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - SICOT</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header class="header">
+    <nav class="navbar">
+        <a href="#" class="navbar__brand"></a>
+        <ul class="navbar__list">
+            <li class="navbar__item"><a href="index.html#inicio" class="navbar__link">Inicio</a></li>
+            <li class="navbar__item"><a href="index.html#about" class="navbar__link">Acerca de Nosotros</a></li>
+            <li class="navbar__item"><a href="index.html#service" class="navbar__link">Servicios</a></li>
+            <li class="navbar__item"><a href="index.html#contact" class="navbar__link">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Formulario de registro -->
+    <div class="form-container">
+
+    <form class="form" id="form-registro">
+        <p id="heading">Crear cuenta</p>
+
+
+        <img class="img-logo" src="img/Logo_sicot.png" alt="Logo SICOT" />
+
+    <div class="form">
+
+    <label for="rol" class="field-label">Elige el rol</label>
+    <div class="field">
+        <select class="input-field" id="rol" required>
+        <option value="" disabled selected>Selecciona un rol</option>
+        <option value="trabajador">Trabajador</option>
+        <option value="administrador">Administrador</option>
+        <option value="inspector">Inspector</option>
+        </select>
+    </div>
+
+    <label for="nombre" class="field-label">Nombres y Apellidos</label>
+    <div class="field">
+        <input type="text" id="nombre" placeholder="Ej. Juan David Perez" class="input-field" required />
+    </div>
+
+    <label for="correo" class="field-label">Correo Electrónico</label>
+    <div class="field">
+        <input type="email" id="correo" placeholder="Correo electrónico" class="input-field" required />
+    </div>
+
+    <label for="contrasena" class="field-label">Contraseña</label>
+    <div class="field">
+        <input type="password" id="contrasena" placeholder="Contraseña" class="input-field" required />
+    </div>
+
+    <div class="btn">
+        <button class="button1">Registrarse</button>
+    </div>
+
+    <p class="register-link">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+    <p>&copy; 2024 SICOT - Todos los derechos reservados</p>
+    </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>

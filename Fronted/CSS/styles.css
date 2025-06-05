@@ -1,0 +1,515 @@
+/* ========================
+   RESET BÁSICO Y VARIABLES
+   ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --naranja: #FF8C33;
+    --azul-oscuro: #001130;
+    --gris-claro: #D6D6D6;
+}
+
+/* ========================
+   ESTILOS GENERALES
+   ======================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif, system-ui;
+    color: #000;
+    line-height: 2.0;
+    background-color: #d5d1d1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ========================
+   NAVBAR
+   ======================== */
+.navbar {
+    background-image: url("../img/Banner.png");
+    background-size: cover;
+    background-position: center;
+    height: 150px; 
+    display: flex;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    font-size: 17px;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.navbar__item {
+    text-align: center;
+}
+
+.navbar__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar__link:hover {
+    background-color: #ff8b33de;
+}
+
+.navbar__link--button {
+    background-color: var(--azul-oscuro);
+    border: 1px solid var(--azul-oscuro);
+    color: var(--naranja);
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.navbar__link--button:hover {
+    background: #002B7F;
+    color: #fff;
+}
+
+/* ========================
+   SECCIÓN HERO
+   ======================== */
+.hero {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #c1bbca6b;
+    color: var(--azul-oscuro);
+    border-radius: 10px;
+}
+
+.container__hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.hero h1, .hero h2 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.hero img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de WhatsApp */
+.button-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe5b;
+}
+
+/* ========================
+   SECCIÓN ACERCA DE
+   ======================== */
+#about {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #c1bbca6b;
+    color: var(--azul-oscuro);
+    border-radius: 10px;
+}
+
+.container__about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+#about h2 {
+    font-size: 30px;
+    margin: 20px 0 45px;
+    text-align: center;
+}
+
+#about p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.img-about {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================
+   SECCIÓN SERVICIOS
+   ======================== */
+.section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #c1bbca6b;
+    color: var(--azul-oscuro);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container__service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.serviceh2 {
+    font-size: 28px;
+    margin: 30px 0;
+}
+
+.service-item {
+    background-color: #c1bbca6b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    line-height: 1.2;
+}
+
+/* ========================
+   SECCIÓN CARACTERÍSTICAS
+   ======================== */
+#features ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#features li {
+    background: var(--gris-claro);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #333;
+}
+
+/* ========================
+   TESTIMONIOS
+   ======================== */
+.testimonial {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #d3d3d3;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+}
+
+/* ========================
+   FORMULARIO DE CONTACTO
+   ======================== */
+.formc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2em;
+    background-color: #5555554d;
+    border-radius: 25px;
+    max-width: 500px;
+    margin: 15px auto;
+    transition: 0.4s ease-in-out;
+}
+
+.formc:hover {
+    transform: scale(1.05);
+    border: 1px solid #ccc;
+}
+
+#headingc {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #333;
+    font-size: 1.4em;
+}
+
+.fieldc {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    border-radius: 25px;
+    padding: 0.7em 1em;
+    background-color: #ffffff;
+    box-shadow: inset 2px 5px 10px rgb(220, 220, 220);
+}
+
+.input-iconc {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #555;
+}
+
+.input-fieldc {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #333;
+    font-size: 15px;
+    resize: none;
+}
+
+.formc .btnc {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1.5em;
+}
+
+.button1c, .button2c {
+    padding: 0.6em 1.4em;
+    border-radius: 8px;
+    border: none;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.4s ease-in-out;
+}
+
+.button1c:hover, .button2c:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* ========================
+    FOOTER
+   ======================== */
+footer {
+    background-color: var(--azul-oscuro);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ========================
+    LOGIN y register
+   ======================== */
+.form-container {
+    min-height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    padding: 30px 20px; /* espacio para navbar y footer */
+    box-sizing: border-box;
+}
+
+.form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #001130;
+    padding: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#heading {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+
+.logo {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 4px !important; 
+    margin-bottom: 10px !important;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #2a2a2a82;
+    box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.input-field {
+    background: #1a1a2e;
+    border: none;
+    outline: none;
+    color: #f0f0f0;
+    width: 100%;
+    font-size: 1em;
+    margin-left: 10px;
+    appearance: none;
+    border-radius: 8px;
+}
+
+
+/* Estilo para las opciones dentro del select */
+.input-field option {
+  background-color: #1a1a2e; /* fondo oscuro */
+  color: #f0f0f0;           /* texto claro */
+}
+
+
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 0.5px;
+}
+
+.button1, .button2, .button3 {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4A4AFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button1:hover, .button2:hover {
+    background-color: #00008B;
+}
+
+.button3 {
+    background-color: #FF8C33;
+}
+
+.button3:hover {
+    background-color: #e67300;
+}
+
+.login-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    }
+
+    .side {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    }
+
+    .side img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #ffffff; /* blanco o ajusta al fondo */
+}
+
+.register-link a {
+    color: #00bfff; /* azul claro o el color que uses para links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    }
+
+.register-link a:hover {
+  color: #1e90ff; /* azul un poco más intenso al pasar el mouse */
+}
+
+.field-label {
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+

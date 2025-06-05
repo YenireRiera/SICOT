@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Administrador</title>
+</head>
+<body>
+    <h2 id="bienvenida"></h2>
+    <p id="rolUsuario"></p>
+
+    <!-- Secciones visibles solo para administrador -->
+    <div data-role="administrador">
+        <h3>Gestión de usuarios</h3>
+        <button onclick="alert('Ir a crear usuario')">Crear usuario</button>
+    </div>
+
+    <!-- Secciones visibles también para trabajador -->
+    <div data-role="trabajador,administrador">
+        <h3>Reportes de incidentes</h3>
+        <button onclick="alert('Ver reportes')">Ver reportes</button>
+    </div>
+
+    <script src="js/panel.js"></script>
+</body>
