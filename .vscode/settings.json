@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/81f09f45-cf1b-4d3c-937a-dbfbffe8153a/resourceGroups/appsvc_linux_eastus/providers/Microsoft.Web/sites/sicot-backend",
+    "appService.deploySubpath": "Backend"
+}

@@ -1,10 +1,8 @@
-const db = require('../config/db');
-
 // Función para crear un nuevo usuario
-const crearUsuario = ({ nombre, correo, contrasena, rol }) => {
+const crearUsuario = ({ nombre, correo, contrasena, rol }, connection) => {
     return new Promise((resolve, reject) => {
         const sql = 'INSERT INTO usuarios (nombre, correo, contrasena, rol) VALUES (?, ?, ?, ?)';
-        db.query(sql, [nombre, correo, contrasena, rol], (err, resultado) => {
+        connection.query(sql, [nombre, correo, contrasena, rol], (err, resultado) => {
             if (err) return reject(err);
             resolve(resultado);
         });
@@ -12,17 +10,16 @@ const crearUsuario = ({ nombre, correo, contrasena, rol }) => {
 };
 
 // Función para buscar un usuario por correo
-const buscarPorCorreo = (correo) => {
+const buscarPorCorreo = (correo, connection) => {
     return new Promise((resolve, reject) => {
         const sql = 'SELECT * FROM usuarios WHERE correo = ?';
-        db.query(sql, [correo], (err, resultados) => {
+        connection.query(sql, [correo], (err, resultados) => {
             if (err) return reject(err);
             resolve(resultados);
         });
     });
 };
 
-// Exporta las funciones para que se puedan usar en los controladores
 module.exports = {
     crearUsuario,
     buscarPorCorreo

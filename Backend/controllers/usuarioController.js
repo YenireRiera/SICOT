@@ -1,13 +1,16 @@
-const bcrypt = require('bcrypt'); // Importar bcrypt para el hash de contraseñas
-const Usuario = require('../models/usuarioModel'); // Importar el modelo de usuario
+const bcrypt = require('bcrypt');
+const Usuario = require('../models/usuarioModel');
 
-
-// Controlador para manejar el registro y login de usuarios
+// Controlador para registrar usuario
 const registrarUsuario = async (req, res) => {
     const { nombre, correo, contrasena, rol } = req.body;
 
     try {
-        const yaExiste = await Usuario.buscarPorCorreo(correo);
+        if (!req.app.locals.connection) {
+            return res.status(503).json({ error: 'Base de datos no disponible' });
+        }
+
+        const yaExiste = await Usuario.buscarPorCorreo(correo, req.app.locals.connection);
         if (yaExiste.length > 0) {
             return res.status(400).json({ error: 'El correo ya está registrado' });
         }
@@ -15,7 +18,7 @@ const registrarUsuario = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hash = await bcrypt.hash(contrasena, salt);
 
-        await Usuario.crearUsuario({ nombre, correo, contrasena: hash, rol });
+        await Usuario.crearUsuario({ nombre, correo, contrasena: hash, rol }, req.app.locals.connection);
 
         res.status(201).json({ mensaje: 'Usuario creado exitosamente' });
     } catch (error) {
@@ -23,13 +26,17 @@ const registrarUsuario = async (req, res) => {
         res.status(500).json({ error: 'Error en el servidor al registrar' });
     }
 };
-// Función para iniciar sesión
+
+// Controlador para login de usuario
 const loginUsuario = async (req, res) => {
     const { correo, contrasena } = req.body;
 
     try {
-        const resultados = await Usuario.buscarPorCorreo(correo);
+        if (!req.app.locals.connection) {
+            return res.status(503).json({ error: 'Base de datos no disponible' });
+        }
 
+        const resultados = await Usuario.buscarPorCorreo(correo, req.app.locals.connection);
         if (resultados.length === 0) {
             return res.status(401).json({ error: 'Credenciales inválidas' });
         }
@@ -52,7 +59,6 @@ const loginUsuario = async (req, res) => {
     }
 };
 
-// Exporta las funciones para que se puedan usar en las rutas
 module.exports = {
     registrarUsuario,
     loginUsuario
